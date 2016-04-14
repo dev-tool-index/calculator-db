@@ -19,4 +19,6 @@ public class IPStatServiceImpl implements IPStatService {
     @Override public void deleteAll() {
         mongoTemplate.dropCollection(IPStatEntity.class);
     }
+    // TODO ttl
+    //http://ericasberry.com/blog/2013/9/5/creating-ttl-indexes-in-spring-data-for-mongodb
 }
