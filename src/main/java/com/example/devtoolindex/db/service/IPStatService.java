@@ -8,4 +8,5 @@ import com.example.devtoolindex.db.entity.IPStatEntity;
 public interface IPStatService {
 
     void save(IPStatEntity ipStatEntity);
+    void deleteAll();
 }
