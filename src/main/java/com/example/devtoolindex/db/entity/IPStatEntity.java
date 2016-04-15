@@ -13,10 +13,10 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by hongkailiu on 2016-04-11.
+ * Entity class of ip stat
  */
 @Document(collection = "ipstat")
-public class IPStatEntity extends BaseEntity {
+public class IPStatEntity {
 
     public static final String VISIT_DATE_NAME ="visit_date";
     public static final long TTL = TimeUnit.DAYS.toSeconds(30);
