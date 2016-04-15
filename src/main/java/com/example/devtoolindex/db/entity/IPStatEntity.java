@@ -2,6 +2,7 @@ package com.example.devtoolindex.db.entity;
 
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -12,6 +13,7 @@ import java.util.concurrent.TimeUnit;
  * Created by hongkailiu on 2016-04-11.
  */
 @Document(collection = "ipstat")
+@EqualsAndHashCode(callSuper=false)
 @Data public class IPStatEntity extends BaseEntity {
 
     public static final String VISIT_DATE_NAME ="visit_date";
