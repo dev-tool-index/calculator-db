@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * Created by hongkailiu on 2016-04-13.
  */
 @RunWith(SpringJUnit4ClassRunner.class) @ContextConfiguration(classes = ITContext.class)
-public class IPStatServiceImplTest {
+public class IPStatServiceImplIT {
 
     @Autowired IPStatService ipStatService;
 
