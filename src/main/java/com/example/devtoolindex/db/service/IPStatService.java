@@ -9,4 +9,6 @@ public interface IPStatService {
 
     void save(IPStatEntity ipStatEntity);
     void deleteAll();
+    int count();
+    IPStatEntity findLatest();
 }

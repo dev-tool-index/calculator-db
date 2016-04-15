@@ -20,8 +20,8 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
         return new MongoTemplate(mongoDbFactory());
     }
 
-    public @Bean IPStatService ipStatService() {
-        return new IPStatServiceImpl();
+    public @Bean IPStatService ipStatService() throws Exception {
+        return new IPStatServiceImpl(mongoTemplate());
     }
 
 }
