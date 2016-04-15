@@ -11,3 +11,6 @@ before_script:
 
 script:
   - ./gradlew check
+
+after_success:
+  - ./gradlew jacocoTestReport coveralls

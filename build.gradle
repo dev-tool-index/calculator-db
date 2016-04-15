@@ -8,9 +8,12 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: "jacoco"
+plugins {
+    id 'java'
+    id 'idea'
+    id 'jacoco'
+    id "com.github.kt3k.coveralls" version "2.6.3"
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -22,8 +25,8 @@ repositories {
     }
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+//sourceCompatibility = JavaVersion.VERSION_1_8
+//targetCompatibility = JavaVersion.VERSION_1_8
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
@@ -48,8 +51,8 @@ jacoco {
 
 jacocoTestReport {
     reports {
-        xml.enabled false
-        csv.enabled false
+        xml.enabled true
+        html.enabled = true
         html.destination "${buildDir}/jacocoHtml"
     }
 }
