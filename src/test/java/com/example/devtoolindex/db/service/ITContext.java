@@ -12,15 +12,15 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
  */
 @Configuration public class ITContext {
 
-    public @Bean MongoDbFactory mongoDbFactory() throws Exception {
+    @Bean public MongoDbFactory mongoDbFactory() throws Exception {
         return new SimpleMongoDbFactory(new MongoClient("127.0.0.1"), "testmongo");
     }
 
-    public @Bean MongoTemplate mongoTemplate() throws Exception {
+    @Bean public MongoTemplate mongoTemplate() throws Exception {
         return new MongoTemplate(mongoDbFactory());
     }
 
-    public @Bean IPStatService ipStatService() throws Exception {
+    @Bean public IPStatService ipStatService() throws Exception {
         return new IPStatServiceImpl(mongoTemplate());
     }
 
