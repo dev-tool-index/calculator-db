@@ -13,6 +13,7 @@ plugins {
     id 'idea'
     id 'jacoco'
     id "com.github.kt3k.coveralls" version "2.6.3"
+    id 'maven'
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -57,3 +58,6 @@ jacocoTestReport {
         html.destination "${buildDir}/jacocoHtml"
     }
 }
+
+group = 'com.github.dev-tool-index'
+version=1.0
