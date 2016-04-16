@@ -60,4 +60,3 @@ jacocoTestReport {
 }
 
 group = 'com.github.dev-tool-index'
-version=1.0
